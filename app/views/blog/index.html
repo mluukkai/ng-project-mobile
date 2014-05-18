@@ -1,0 +1,13 @@
+<div ng-controller="IndexCtrl">
+
+  <button ng-click="showModal()" class="button button-full button-positive">
+	Create a new blog
+  </button>	
+
+  <ul class="list">
+    <li class="item item-icon-right" ng-click="open(blog.id)" ng-repeat="blog in blogs | orderBy:'id':true">
+      {{ blog.subject }} by {{ blog.user }}
+      <i class="icon ion-ios7-arrow-right"></i>
+    </li>
+  </ul>
+</div>

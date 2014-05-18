@@ -1,0 +1,55 @@
+<body ng-controller="ModalCtrl" class="padding">
+
+	<div class="bar bar-header bar-positive">
+  		<h1 class="title">A new blog entry</h1>
+	</div>
+
+	<div style="padding-top:1.5cm;">
+				
+		<div ng-show="flash" class="list card">
+		  	<div class="item item-divider">
+	    		<h2>{{new.subject}}</h2>
+	    		<p>A new blog entry by {{new.user}}</p>
+	  		</div>
+	  		<div class="item item-text-wrap">
+	    		{{new.body}}
+	  		</div>
+		</div>
+
+
+		<div ng-hide="flash">
+		  	<form ng-submit="createBlog()">
+				<div class="list">
+				  <label class="item item-input item-stacked-label">
+				    <span class="input-label">name</span>
+				    <input type="text" ng-model="blog.user">
+				  </label>
+				  <label class="item item-input item-stacked-label">
+				    <span class="input-label">Subject</span>
+				    <input type="text" ng-model="blog.subject">
+				  </label>
+				  <label class="item item-input item-stacked-label">
+				    <span class="input-label">content</span>
+				    <textarea rows="4" ng-model="blog.body">	    	
+				    </textarea>
+				  </label>
+				  
+				  <div class="button-bar">
+				  	<button class="button button-positive">
+		  			Create
+				  	</button>
+
+				  	<button ng-click="hide()" class="button button-calm">
+		  			Cancel
+				  	</button>		  
+
+					</div>
+				</div>
+
+			</form>	
+
+		</div>
+
+	</div>
+
+</body>

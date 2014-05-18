@@ -1,0 +1,13 @@
+<div ng-controller="ShowCtrl" class="padding">
+
+  <h2>{{blog.subject}}</h2>
+
+  <p>by <strong>{{blog.user}}</strong></p>
+
+  <blockquote>
+  	{{blog.body}}
+  </blockquote>
+
+ <a ng-click="delete()"><i style="float:right" class="icon ion-trash-a"></i></a>
+
+</div>

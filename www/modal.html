@@ -1,0 +1,28 @@
+<body>
+  <div>
+    <a ontouchend="steroids.modal.hide()">Hide currently open modal</a>
+  </div>
+
+  	<form ng-submit="createBlog()">
+		<div class="list">
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">name</span>
+		    <input type="text" ng-model="blog.user">
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Subject</span>
+		    <input type="text" ng-model="blog.subject">
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">content</span>
+		    <textarea rows="4" ng-model="blog.body">	    	
+		    </textarea>
+		  </label>
+		  <button class="button button-block button-positive">
+  			Create
+		  </button>
+		</div>
+
+		{{blog}}
+
+</body>
